@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eugenio Aulisa's Personal Home Page</title>
+  <meta name="description" content="Website of Eugenio Aulisa, Department of Mathematics and Statistics, Texas Tech University">
+  <meta name="keywords" content="Eugenio Aulisa, mathematics, Texas Tech University, FEMuS, finite element, video gallery">
+  <link rel="stylesheet" href="./files/EugenioAulisaCV.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #111;
+      background: #fff;
+      padding-top: 64px;
+      line-height: 1.5;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      min-height: 56px;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 28px;
+      z-index: 9999;
+      padding: 8px 16px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      text-decoration: underline;
+    }
+
+    [id]::before {
+      content: "";
+      display: block;
+      height: 70px;
+      margin-top: -70px;
+      visibility: hidden;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 20px 48px;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .section-divider {
+      border: none;
+      height: 4px;
+      background: #000;
+      margin: 32px 0 20px;
+    }
+
+    .profile-photo {
+      display: block;
+      margin: 0 auto 16px;
+      width: 182px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .name {
+      font-size: 2.1rem;
+      font-weight: 700;
+      margin: 10px 0 12px;
+    }
+
+    .contact p {
+      margin: 4px 0;
+    }
+
+    .cv-link {
+      color: #CC0000;
+      font-size: 1.35rem;
+      font-weight: 700;
+      font-style: italic;
+      text-decoration: none;
+    }
+
+    .cv-link:hover,
+    .cv-link:focus {
+      text-decoration: underline;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0 0 18px;
+    }
+
+    .course-block {
+      margin-bottom: 18px;
+    }
+
+    .course-title {
+      font-size: 1.55rem;
+      font-weight: 700;
+      margin: 0 0 12px;
+    }
+
+    .course-links {
+      font-size: 1.7rem;
+      font-weight: 600;
+    }
+
+    .course-links a {
+      color: #CC0000;
+      text-decoration: none;
+      margin: 0 20px;
+    }
+
+    .course-links a:hover,
+    .course-links a:focus,
+    .project-link:hover,
+    .project-link:focus,
+    .collab-link:hover,
+    .collab-link:focus {
+      text-decoration: underline;
+    }
+
+    .project-link {
+      color: #CC0000;
+      text-decoration: none;
+      font-size: 2.1rem;
+      font-weight: 700;
+    }
+
+    .project-subtitle {
+      color: #CC0000;
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-top: 6px;
+    }
+
+    .project-image {
+      display: block;
+      margin: 18px auto 0;
+      width: 400px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .gallery-title {
+      margin-bottom: 20px;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+
+    .column {
+      flex: 1 1 calc(50% - 12px);
+      min-width: 280px;
+    }
+
+    .video-card,
+    .video-wide {
+      text-align: center;
+    }
+
+    .video-heading {
+      color: #CC0000;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .video-heading a,
+    .collab-link {
+      color: #CC0000;
+      text-decoration: none;
+    }
+
+    .video-heading .plain-collab {
+      color: #CC0000;
+    }
+
+    figure.video-container {
+      margin: 0;
+    }
+
+    figcaption {
+      margin-top: 10px;
+      font-size: 0.98rem;
+      line-height: 1.45;
+      text-align: left;
+      color: #222;
+    }
+
+    video {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .spacer {
+      height: 16px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (max-width: 700px) {
+      body {
+        padding-top: 90px;
+      }
+
+      nav {
+        gap: 14px;
+      }
+
+      [id]::before {
+        height: 96px;
+        margin-top: -96px;
+      }
+
+      .course-links {
+        font-size: 1.4rem;
+      }
+
+      .course-links a {
+        display: inline-block;
+        margin: 6px 12px;
+      }
+
+      .section-title {
+        font-size: 1.7rem;
+      }
+
+      .course-title {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body data-new-gr-c-s-check-loaded="8.937.0" data-gr-ext-installed="">
+  <a class="sr-only" href="#main-content">Skip to main content</a>
+
+  <nav aria-label="Main navigation">
+    <a href="#current-teaching">Current Teaching</a>
+    <a href="#femus-project">FEMuS Project</a>
+    <a href="#video-gallery">Video Gallery</a>
+    <a href="#cv">CV</a>
+  </nav>
+
+  <main id="main-content" class="container">
+    <section class="center" aria-labelledby="profile-heading">
+      <img class="profile-photo" src="./files//myphoto.jpg" alt="Portrait photograph of Eugenio Aulisa">
+
+      <h1 id="profile-heading" class="name">Eugenio Aulisa</h1>
+
+      <div class="contact">
+        <p>Department of Mathematics and Statistics, room 226</p>
+        <p>Broadway and Boston, Texas Tech University</p>
+        <p>Lubbock TX, 70409-1042</p>
+        <p>phone: (806) 834-6684</p>
+        <p>fax: (806) 742-1112</p>
+        <p>email: eugenio.aulisa@ttu.edu</p>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <section id="cv" class="center" aria-labelledby="cv-heading">
+      <h2 id="cv-heading" class="sr-only">Curriculum Vitae</h2>
+      <a class="cv-link" href="./files/EugenioAulisaCV.pdf">
+        CURRICULUM VITAE
+      </a>
+    </section>
+
+    <hr class="section-divider">
+
+    <section id="current-teaching" class="center" aria-labelledby="current-teaching-heading">
+      <h2 id="current-teaching-heading" class="section-title">Current Teaching</h2>
+
+      <div class="course-block">
+        <h3 class="course-title">CALCULUS III with applications, Fall 2026</h3>
+        <div class="course-links">
+          <a href="https://texastech.instructure.com/courses/98447">Honors 01 </a>
+          <a href="https://texastech.instructure.com/courses/97534">Distance 01 </a>
+          <a href="https://webwork.math.ttu.edu/mycourses/index.php">Webwork</a>
+          <a href="https://zoom.us/j/5791285573?pwd=QjdCZUZleC9MSGdxZHJCbERDaUdWdz09#success">Zoom</a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <section id="femus-project" class="center" aria-labelledby="femus-heading">
+      <h2 id="femus-heading" class="section-title" style="margin-bottom: 8px;">
+        <a class="project-link" href="http://femttu.github.io/">The FEMuS Project</a>
+      </h2>
+      <div class="project-subtitle">Finite Element Multi-Physics Solver</div>
+
+      <img class="project-image" src="./files/femus.png" alt="FEMuS project logo for the Finite Element Multi-Physics Solver">
+    </section>
+
+    <hr class="section-divider">
+
+    <section id="video-gallery" class="center" aria-labelledby="video-gallery-heading">
+      <h2 id="video-gallery-heading" class="section-title gallery-title">Video Gallery</h2>
+
+      <div class="row">
+        <div class="column">
+          <div class="video-card">
+            <div class="video-heading" id="video-title-turek3">
+              FSI Turek 3 Benchmark
+              <br>
+              with
+              <a class="collab-link" href="https://www.unibo.it/sitoweb/giorgio.bornia/en">G. Bornia</a>
+              and
+              <a class="collab-link" href="https://www.hpc.cineca.it/staff/bn%C3%A0-simone">S. Bna'</a>
+            </div>
+            <figure class="video-container">
+              <video controls="controls" width="80%" aria-labelledby="video-title-turek3 video-desc-turek3" preload="metadata">
+                <source src="./files/turek3.mp4" type="video/mp4">
+                Your browser does not support the HTML5 video element.
+              </video>
+              <figcaption id="video-desc-turek3">
+                Numerical simulation of the Turek 3 fluid-structure 
+interaction benchmark. The video shows flow-driven deformation of an 
+elastic structure attached to a cylinder, illustrating oscillatory 
+motion and coupled fluid and solid dynamics over time.
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="spacer"></div>
+
+          <div class="video-card">
+            <div class="video-heading" id="video-title-vessel">
+              FSI Vessel Schock Wave
+              <br>
+              with
+              <a class="collab-link" href="https://www.unibo.it/sitoweb/giorgio.bornia/en">G. Bornia</a>
+              and
+              <a class="collab-link" href="https://www.hpc.cineca.it/staff/bn%C3%A0-simone">S. Bna'</a>
+            </div>
+            <figure class="video-container">
+              <video controls="controls" width="80%" aria-labelledby="video-title-vessel video-desc-vessel" preload="metadata">
+                <source src="./files/vessel.mp4" type="video/mp4">
+                Your browser does not support the HTML5 video element.
+              </video>
+              <figcaption id="video-desc-vessel">
+                Fluid-structure interaction simulation of a shock wave 
+propagating through a vessel. The animation shows transient 
+pressure-driven motion of the vessel wall and the resulting deformation 
+induced by the traveling wave.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="video-card">
+            <div class="video-heading" id="video-title-vein">
+              FSI Vein Valve
+              <br>
+              with
+              <a class="collab-link" href="https://orcid.org/0000-0001-7844-4048">S. Calandrini</a>
+            </div>
+            <figure class="video-container">
+              <video controls="controls" width="60%" aria-labelledby="video-title-vein video-desc-vein" preload="metadata">
+                <source src="./files/vein.mp4" type="video/mp4">
+                Your browser does not support the HTML5 video element.
+              </video>
+              <figcaption id="video-desc-vein">
+                Simulation of a venous valve in an interacting fluid and
+ deformable structure setting. The video shows opening and closing of 
+the valve leaflets under flow, emphasizing valve motion and the 
+surrounding fluid response.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <div class="video-card">
+            <div class="video-heading" id="video-title-aneurysm">
+              Magnetic Particle FSI Aneurysm
+              <br>
+              with
+              <a class="collab-link" href="https://cnls.lanl.gov/external/people/Giacomo_Capodaglio.php">G. Capodaglio</a>
+              and
+              <a class="collab-link" href="https://orcid.org/0000-0001-7844-4048">S. Calandrini</a>
+            </div>
+            <figure class="video-container">
+              <video controls="controls" width="80%" aria-labelledby="video-title-aneurysm video-desc-aneurysm" preload="metadata">
+                <source src="./files/aneurysm.mp4" type="video/mp4">
+                Your browser does not support the HTML5 video element.
+              </video>
+              <figcaption id="video-desc-aneurysm">
+                Fluid-structure interaction simulation in an aneurysm 
+geometry with magnetic particles. The animation shows particle transport
+ within pulsatile flow and deformation of the vascular structure in a 
+localized dilated region.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="video-card">
+            <div class="video-heading" id="video-title-artery">
+              Magnetic Particle FSI Artery Bifurcation
+              <br>
+              with
+              <a class="collab-link" href="https://cnls.lanl.gov/external/people/Giacomo_Capodaglio.php">G. Capodaglio</a>
+              and
+              <a class="collab-link" href="https://orcid.org/0000-0001-7844-4048">S. Calandrini</a>
+            </div>
+            <figure class="video-container">
+              <video controls="controls" width="80%" aria-labelledby="video-title-artery video-desc-artery" preload="metadata">
+                <source src="./files/artery.mp4" type="video/mp4">
+                Your browser does not support the HTML5 video element.
+              </video>
+              <figcaption id="video-desc-artery">
+                Simulation of magnetic particle transport in a 
+bifurcating artery with fluid-structure interaction. The video 
+illustrates how particles move through the branching vessel while the 
+arterial walls deform under the flow.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <div class="video-card">
+            <div class="video-heading" id="video-title-knot23">
+              Almost-isometric Willmore flow of a (2,3) torus knot
+              <br>
+              with
+              <a class="collab-link" href="https://agrubertx.github.io/">A. Gruber</a>
+            </div>
+            <figure class="video-container">
+              <video controls="controls" width="80%" aria-labelledby="video-title-knot23 video-desc-knot23" preload="metadata">
+                <source src="./files/knotT.mp4" type="video/mp4">
+                Your browser does not support the HTML5 video element.
+              </video>
+              <figcaption id="video-desc-knot23">
+                Geometric evolution of a (2,3) torus knot under an 
+almost-isometric Willmore flow. The animation shows smooth deformation 
+of the knot while approximately preserving intrinsic geometric features 
+during the flow.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="video-card">
+            <div class="video-heading" id="video-title-knot43">
+              Almost-isometric Willmore flow of a (4,3) torus knot
+              <br>
+              with
+              <a class="collab-link" href="https://agrubertx.github.io/">A. Gruber</a>
+            </div>
+            <figure class="video-container">
+              <video controls="controls" width="80%" aria-labelledby="video-title-knot43 video-desc-knot43" preload="metadata">
+                <source src="./files/superknotT.mp4" type="video/mp4">
+                Your browser does not support the HTML5 video element.
+              </video>
+              <figcaption id="video-desc-knot43">
+                Geometric evolution of a (4,3) torus knot under an 
+almost-isometric Willmore flow. The video displays the changing knot 
+shape as curvature-driven smoothing acts while the knot topology is 
+retained.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <div class="video-card">
+            <div class="video-heading" id="video-title-cow">
+              Area-preserving Willmore flow of a cow
+              <br>
+              with
+              <a class="collab-link" href="https://agrubertx.github.io/">A. Gruber</a>
+            </div>
+            <figure class="video-container">
+              <video controls="controls" width="80%" aria-labelledby="video-title-cow video-desc-cow" preload="metadata">
+                <source src="./files/areaprescow.mp4" type="video/mp4">
+                Your browser does not support the HTML5 video element.
+              </video>
+              <figcaption id="video-desc-cow">
+                Surface evolution of a cow-shaped geometry under 
+area-preserving Willmore flow. The animation shows progressive smoothing
+ of the shape while maintaining surface area as the object evolves.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="video-card">
+            <div class="video-heading" id="video-title-rabbitdog-av">
+              Area and volume preserving Willmore flow of a rabbit-dog
+              <br>
+              with
+              <a class="collab-link" href="https://agrubertx.github.io/">A. Gruber</a>
+            </div>
+            <figure class="video-container">
+              <video controls="controls" width="80%" aria-labelledby="video-title-rabbitdog-av video-desc-rabbitdog-av" preload="metadata">
+                <source src="./files/dogtodisk.mp4" type="video/mp4">
+                Your browser does not support the HTML5 video element.
+              </video>
+              <figcaption id="video-desc-rabbitdog-av">
+                Evolution of a rabbit-dog shape under a Willmore flow 
+constrained to preserve both area and volume. The video shows the object
+ gradually simplifying and smoothing while retaining global geometric 
+measures.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <div class="video-card">
+            <div class="video-heading" id="video-title-moai">
+              Volume-preserving mean curvature flow of a moai statue
+              <br>
+              with
+              <a class="collab-link" href="https://agrubertx.github.io/">A. Gruber</a>
+            </div>
+            <figure class="video-container">
+              <video controls="controls" width="80%" aria-labelledby="video-title-moai video-desc-moai" preload="metadata">
+                <source src="./files/MCF_statue.mp4" type="video/mp4">
+                Your browser does not support the HTML5 video element.
+              </video>
+              <figcaption id="video-desc-moai">
+                Volume-preserving mean curvature flow applied to a moai 
+statue geometry. The animation shows curvature-driven smoothing of the 
+statue while preserving overall enclosed volume.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="video-card">
+            <div class="video-heading" id="video-title-rabbitdog-v">
+              Volume-preserving Willmore flow of a rabbit-dog
+              <br>
+              with
+              <a class="collab-link" href="https://agrubertx.github.io/">A. Gruber</a>
+            </div>
+            <figure class="video-container">
+              <video controls="controls" width="80%" aria-labelledby="video-title-rabbitdog-v video-desc-rabbitdog-v" preload="metadata">
+                <source src="./files/dogtoballV.mp4" type="video/mp4">
+                Your browser does not support the HTML5 video element.
+              </video>
+              <figcaption id="video-desc-rabbitdog-v">
+                Rabbit-dog geometry evolving under a volume-preserving 
+Willmore flow. The video illustrates the gradual transition toward a 
+smoother configuration while maintaining enclosed volume.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <div class="video-card">
+            <div class="video-heading" id="video-title-vortex4">
+              Interface Tracking Single Vortex Benchmark, T = 4
+              <br>
+              with
+              <span class="plain-collab">A. Chierici and G. Barbi</span>
+            </div>
+            <figure class="video-container">
+              <video controls="controls" width="80%" aria-labelledby="video-title-vortex4 video-desc-vortex4" preload="metadata">
+                <source src="./files/vortex4.mp4" type="video/mp4">
+                Your browser does not support the HTML5 video element.
+              </video>
+              <figcaption id="video-desc-vortex4">
+                Interface-tracking benchmark for a single-vortex flow up
+ to final time T = 4. The animation shows deformation and recovery of an
+ interface transported by a rotating flow field.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="video-card">
+            <div class="video-heading" id="video-title-rti">
+              Rayleigh-Bernard Instability
+              <br>
+              with A. Chierici, G. Barbi, and H. Don-Gammanpila
+            </div>
+            <figure class="video-container">
+              <video controls="controls" width="40%" aria-labelledby="video-title-rti video-desc-rti" preload="metadata">
+                <source src="./files/RTI.mp4" type="video/mp4">
+                Your browser does not support the HTML5 video element.
+              </video>
+              <figcaption id="video-desc-rti">
+                Simulation of buoyancy-driven instability with evolving 
+fluid structures. The video displays the development of instability 
+patterns and mixing behavior caused by density differences in the flow.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="video-wide" style="width: 100%;">
+          <div class="video-heading" id="video-title-oseen">
+            Time Dependent Optimal Control Example for Navier Stokes
+            <br>
+            The optimal solution (on the right) tracks the manufactured 
+solution (on the left) through a velocity boundary control tangential to
+ the left boundary
+            <br>
+            with
+            <span class="plain-collab">A. Chierici and D. Gilliam</span>
+          </div>
+          <figure class="video-container">
+            <video controls="controls" width="80%" aria-labelledby="video-title-oseen video-desc-oseen" preload="metadata">
+              <source src="./files/oseen.mp4" type="video/mp4">
+              Your browser does not support the HTML5 video element.
+            </video>
+            <figcaption id="video-desc-oseen">
+              Time-dependent optimal control example for the 
+Navier-Stokes equations. The left side shows a manufactured target 
+solution and the right side shows the controlled solution tracking that 
+target through tangential boundary velocity control.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+  </main>
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
